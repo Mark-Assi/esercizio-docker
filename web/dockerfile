@@ -2,4 +2,4 @@ FROM php:8.2-apache-bullseye
 
 WORKDIR /var/www/html
 
-RUN apt-get update && apt-get install -y default-mysql-client && rm -rf /var/lib/apt/lists/*
+RUN docker-php-ext-install default-mysql mysqli pdo pdo_mysql
